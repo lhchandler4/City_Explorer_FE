@@ -1,4 +1,5 @@
 import React from 'react';
+import superagent from 'superagent';
 
 class Header extends React.Component {
   render(){
