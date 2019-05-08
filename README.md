@@ -1,14 +1,14 @@
 ##City Explorer Front End with REACT
 
-Number and name of feature: ________________________________
+Number and name of feature: feature 01 scaffolding
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 2 hours
 
-Start time: _____
+Start time: 9:00
 
-Finish time: _____
+Finish time: 10:45
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1 hour 45 minutes
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
