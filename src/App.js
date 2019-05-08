@@ -25,6 +25,10 @@ class Main extends React.Component {
             <Search />
             <Map />
             <Result />
+            <Result />
+            <Result />
+            <Result />
+            <Result />
           </React.Fragment>
         )  
       }
@@ -80,23 +84,9 @@ class Result extends React.Component {
   }
     render() {
       return (
-        <div>
-          <div>
-            <p>Dark Sky Weather</p>
-          </div>
-          <div>
-            <p>Event Brite</p>
-          </div>
-          <div>
-            <p>Movie DB</p>
-          </div>
-          <div>
-            <p>Yelp</p>
-          </div>
-          <div>
-            <p>Hiking</p>
-          </div>
-        </div>
+        <section>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </section>
       )
     }
 }
@@ -106,11 +96,10 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <Main />
+        <Main url="google.com"/>
       </React.Fragment>
     )
   }
 }
 
 export default App;
-
