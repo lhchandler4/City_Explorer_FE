@@ -30,7 +30,7 @@ class Events extends React.Component {
 
     render() {
       return (
-        <React.Fragment>
+        <section id='event'>
           <h2>Events</h2>
         {this.state.eventsResults.map((val, idx) => {
           return (
@@ -43,7 +43,7 @@ class Events extends React.Component {
             </div>
             );
           })}
-        </React.Fragment>
+        </section>
       )
     }
 

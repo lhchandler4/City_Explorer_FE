@@ -30,7 +30,7 @@ class Weather extends React.Component {
 
     render() {
       return (
-        <React.Fragment>
+        <section>
           <h2>Dark Sky Weather</h2>
         {this.state.weatherResults.map((val, idx) => {
           return (
@@ -41,7 +41,7 @@ class Weather extends React.Component {
             </div>
             );
           })}
-        </React.Fragment>
+        </section>
       )
     }
 
