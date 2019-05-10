@@ -1,20 +1,20 @@
 import React from 'react';
 import superagent from 'superagent';
 
-class Weather extends React.Component {
+class Events extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      weatherResults: []
+      eventsResults: []
     }
   }
 
   setLatLong = async event => {
-    let weatherData = await superagent.get('https://mysterious-river-14511.herokuapp.com/weather')
+    let eventsData = await superagent.get('https://mysterious-river-14511.herokuapp.com/events')
       .query({data: {latitude: this.props.latitude, longitude: this.props.longitude}});    
-      this.setState({weatherResults: weatherData.body})
-      console.log('Weather Data', weatherData.body);
+      this.setState({eventsResults: eventsData.body})
+      console.log('events Data', eventsData.body);
   };
 
   componentDidMount() {
@@ -31,12 +31,14 @@ class Weather extends React.Component {
     render() {
       return (
         <React.Fragment>
-          <h2>Dark Sky Weather</h2>
-        {this.state.weatherResults.map((val, idx) => {
+          <h2>Events</h2>
+        {this.state.eventsResults.map((val, idx) => {
           return (
             <div>
-                <li key={idx}>
-                  {`The forecast for ${val.time} is: ${val.forecast}`}
+                 <li key={idx}>
+                    <a href={ val.link }>{ val.name }</a>
+                    <p>Event Date: { val.event_date }</p>
+                    <p>{ val.summary }</p>
                 </li>
             </div>
             );
@@ -47,4 +49,4 @@ class Weather extends React.Component {
 
 }
 
-export default Weather;
+export default Events;

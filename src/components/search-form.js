@@ -14,12 +14,9 @@ class Search extends React.Component {
 
   handleChange = (event) => {
     this.setState({value: event.target.value});
-    console.log({value: event.target.value});
   }
 
   handleSearch = async event => {
-    console.log('calling')
-    alert('You searched for ' + this.state.value);
     event.preventDefault();
     let data = await superagent.get('https://mysterious-river-14511.herokuapp.com/location').query({data: this.state.value});
     this.props.handler(data);
