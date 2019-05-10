@@ -24,7 +24,7 @@ class Search extends React.Component {
 
     render() {
       return (
-        <div>
+        <div id='search'>
           <input onChange = {this.handleChange} />
           <button type='submit' onClick = {this.handleSearch}>Search Location</button>
         </div>

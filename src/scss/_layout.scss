@@ -25,4 +25,8 @@ section {
   margin: 5px;
   background-color: #FFF;
   display: inline grid;
+  padding: 20px;
+  word-wrap: break-word;
+  height: 40vh;
+  overflow: auto;
 }

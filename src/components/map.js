@@ -23,7 +23,7 @@ class Map extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <img alt='map' src={this.state.mapUrl}/>
+        <img id='map' alt='map' src={this.state.mapUrl}/>
       </React.Fragment>
     )
   }

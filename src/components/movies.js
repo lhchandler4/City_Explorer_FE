@@ -30,7 +30,7 @@ class Movies extends React.Component {
 
     render() {
       return (
-        <React.Fragment>
+        <section class='column-container'>
           <h2>Movies DB</h2>
         {this.state.movieResults.map((val, idx) => {
           return (
@@ -43,7 +43,7 @@ class Movies extends React.Component {
             </div>
             );
           })}
-        </React.Fragment>
+        </section>
       )
     }
 

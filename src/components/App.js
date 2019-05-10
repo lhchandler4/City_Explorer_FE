@@ -7,6 +7,7 @@ import Movies from './movies.js';
 import Yelp from './yelp.js';
 import Events from './events.js';
 
+
 const If = props => {
   return props.condition ? props.children : null;
 }
@@ -30,22 +31,24 @@ class Main extends React.Component {
           <React.Fragment>
             <Search prompt="Click for information on your chosen location" handler={this.handleForm} />
             <Map results={this.state.results}/>
+          <div id='all'>
             <If condition={ this.state.results !== null}>
               <Weather
                 latitude={this.state.results ? this.state.results.body.latitude : ''} 
                 longitude={this.state.results ? this.state.results.body.longitude : ''}
-              />
+                />
               <Events 
                 latitude={this.state.results ? this.state.results.body.latitude : ''} 
                 longitude={this.state.results ? this.state.results.body.longitude : ''}
-              />
+                />
               <Movies
                 results={this.state.results}
-              />
+                />
               <Yelp
                 results={this.state.results}
-              />
+                />
             </If>
+          </div>
           </React.Fragment>
         )  
       }
